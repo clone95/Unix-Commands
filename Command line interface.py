@@ -1,12 +1,6 @@
 import shutil as util
 
 
-def shortest (first, second):
-    if len(first )> len(second):
-        return second
-    else: return first
-
-
 def clean_words(rows_list):
     clean_rows = []
     for index in range(0, len(rows_list)):
