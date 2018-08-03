@@ -11,6 +11,10 @@ def clean_words(rows_list):
     return clean_rows
 
 
+def cd (*args):
+    os.chdir(args[0][0])
+
+
 def helper():
     helper_dict = {}
     helper_dict["cp"] = "source  [destinations...] \n\n"
@@ -78,15 +82,16 @@ def main():
         print(diff(params[0], params[1]))
     elif choice.split()[0] == "ls":
         ls(params)
-
     elif choice.split()[0] == "cd":
-        return True
-    else:
+        cd (params)
+    elif choice.split()[0] == "help":
         helper()
+    else: exit(-1)
 
 
 welcome = ("\nUnix-like Python Script Implementation \n"
            "Type 'help' for commands usage\n"
+           "Type 'exit' to quit\n"
            "You can launch the following commands: \n\n"
            "- cp\n"
            "- mv\n"
@@ -95,7 +100,8 @@ welcome = ("\nUnix-like Python Script Implementation \n"
            "- cd\n\n")
 
 
-main()
+while (True):
+    main()
 
 
 # C:/Users/Giacomo/PycharmProjects/Unix-Commands/file1.txt C:/Users/Giacomo/PycharmProjects/Unix-Commands/file2.txt

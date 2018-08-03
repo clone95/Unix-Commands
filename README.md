@@ -1,6 +1,11 @@
 # Unix-Commands
 
+
+
 Command line interface that shows a collection of Unix common commands re-implemented in Python 3.6
+
+
+
 
 -------------------------------------------
 
@@ -45,3 +50,13 @@ Usage Example:
 ls -t
 
 ls C:/Users
+
+------------------------------------------
+
+COMMAND:    cd  destination
+
+It changes the actual current directory with the specified one. It needs absolute path.
+
+Usage Example:
+
+cd C:/Users/Giacomo
