@@ -2,9 +2,8 @@
 
 Command line interface that shows a collection of Unix common commands re-implemented in Python 3.6
 
-Commands:
-
 -------------------------------------------
+
 COMMAND:    cp  source  [destinations...]
 
 It copies a file to single/multiple destinations.
@@ -29,7 +28,7 @@ mv  C:/Users/Giacomo/Source/file_to_copy.txt    C:/Users/Giacomo/Destination_1/f
 
 COMMAND:    diff  file1   file2
 
-It finds differences between files returning a list of words.
+It finds differences between files returning a list of words (the words of one file which aren't in the other, and vice versa).
 
 Usage Example:
 
