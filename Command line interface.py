@@ -1,5 +1,5 @@
 import shutil as util
-
+import os
 
 def clean_words(rows_list):
     clean_rows = []
@@ -44,6 +44,17 @@ def copy(*args):
     return True
 
 
+def ls(*args):
+    if args[0][0] == "-t":
+        content = os.listdir()
+        for i in range (0, len(content)):
+            print(content[i])
+    else:
+        content = os.listdir(args[0][0])
+        for i in range (0, len(content)):
+            print(content[i])
+
+
 def move(*args):
     source = args[0][1]
     destinations = args[0][2:]
@@ -66,7 +77,8 @@ def main():
     elif choice.split()[0] == "diff":
         print(diff(params[0], params[1]))
     elif choice.split()[0] == "ls":
-        return True
+        ls(params)
+
     elif choice.split()[0] == "cd":
         return True
     else:

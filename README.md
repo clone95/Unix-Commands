@@ -35,3 +35,13 @@ Usage Example:
 diff  C:/Users/Giacomo/Source/file_1.txt   C:/Users/Giacomo/Destination_1/file_2.txt
 
 -------------------------------------------
+
+COMMAND:    ls  -t  dir
+
+It show the content of the directory. ls -t show the actual directory, ls <path>  shows the content of the directory specified.
+
+Usage Example:
+
+ls -t
+
+ls C:/Users
