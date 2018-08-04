@@ -1,23 +1,24 @@
 import shutil as util
 import os
 
-def clean_words(rows_list):
+
+def clean_words(rows_list):                                             # it deletes \n from file lines
     clean_rows = []
     for index in range(0, len(rows_list)):
-        if index != (len(rows_list)-1):
+        if index != (len(rows_list)-1):                                 # does it for all lines except for the last one
             clean_rows.append(rows_list[index][:-1])
         else:
             clean_rows.append(rows_list[index])
     return clean_rows
 
 
-def cd (*args):
+def cd(*args):
     os.chdir(args[0][0])
 
 
 def helper():
-    helper_dict = {}
-    helper_dict["cp"] = "source  [destinations...] \n\n"
+    helper_dict = dict                                                  # stores commands usage into a dict so they
+    helper_dict["cp"] = "source  [destinations...] \n\n"                # can be faster to be updated
     helper_dict["mv"] = "source  [destinations...] \n\n"
     helper_dict["diff"] = "source  [destinations...] \n\n"
     helper_dict["ls"] = "source  [destinations...] \n\n"
@@ -26,7 +27,7 @@ def helper():
         print("Command  " + command + " ---> " + command + "  " + helper_dict[command])
 
 
-def diff (file1, file2):
+def diff(file1, file2):
     file1 = open(file1, "r")
     file2 = open(file2, "r")
     words_1 = clean_words(file1.readlines())
@@ -73,8 +74,8 @@ def move(*args):
 def main():
     print(welcome)
     choice = input("Launch command: \n\n")
-    params = choice.split()[1:]
-    if choice.split()[0] == "cp":
+    params = choice.split()[1:]                             # by default i pass params to function calls:
+    if choice.split()[0] == "cp":                           # they are first, second, etc... arguments for the command
         copy(params.split())
     elif choice.split()[0] == "mv":
         move(params.split())
@@ -104,4 +105,4 @@ while (True):
     main()
 
 
-# C:/Users/Giacomo/PycharmProjects/Unix-Commands/file1.txt C:/Users/Giacomo/PycharmProjects/Unix-Commands/file2.txt
+
