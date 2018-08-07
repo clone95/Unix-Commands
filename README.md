@@ -5,7 +5,7 @@
 Command line interface that shows a collection of Unix common commands re-implemented in Python 3.6
 
 ## Getting started
-Once donwloaded the script, just launch it on a Python 3 console.
+Once downloaded the script, just launch it on a Python 3 console.
 You can call commands exactly as UNIX style.
 
 ```
